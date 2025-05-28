@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decision-Maker AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 FinalAnswer ✅</h1>
+    <form id="decision-form">
+      <label>Your decision:</label>
+      <textarea id="decisionInput" placeholder="Describe the decision…" required></textarea>
+
+      <label>Context (optional):</label>
+      <textarea id="infoInput" placeholder="Facts, numbers, links…"></textarea>
+
+      <label>Risk tolerance:</label>
+      <select id="riskTolerance">
+        <option>Low</option>
+        <option selected>Medium</option>
+        <option>High</option>
+      </select>
+
+      <button type="submit" id="submitBtn">Decide!</button>
+      <div id="spinner" class="hidden">✨ Crunching the numbers…</div>
+    </form>
+
+    <div id="results" class="hidden">
+      <div id="verdict" class="card"></div>
+      <div id="pros" class="list"></div>
+      <div id="cons" class="list"></div>
+      <div id="rationale" class="card"></div>
+      <button id="restartBtn">Start over</button>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
